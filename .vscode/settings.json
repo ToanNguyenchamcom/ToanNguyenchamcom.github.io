@@ -1,0 +1,15 @@
+{
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/Assets/CSS"
+        }
+    ],
+   "liveSassCompile.settings.partialsList": [
+    "/**/node_modules/**",
+    "/.vscode/**",
+    "/Assets/lib/**"
+]
+
+}

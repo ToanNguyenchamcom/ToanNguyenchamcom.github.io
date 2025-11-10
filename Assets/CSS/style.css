@@ -1,0 +1,223 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.icon {
+  font-size: 20px;
+  color: black;
+  padding-left: 25px;
+  padding-top: 10px;
+  font-size: 22px;
+  border-radius: 12px;
+}
+
+.item {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.item.active .icon {
+  color: #0068FF;
+  transform: scale(1.2);
+}
+
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.nav ul li {
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: block;
+  width: 94px;
+  height: 75px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
+.nav ul li span {
+  display: none;
+  font-size: 12px;
+  text-align: center;
+  padding: 5px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.personal-info .pictures {
+  position: relative;
+}
+.personal-info .pictures img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.personal-info .pictures .background > img {
+  height: 25vh;
+  max-height: 400px;
+  width: 100vw;
+}
+.personal-info .pictures .avatar > img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3.5px white;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 10%);
+}
+
+.info {
+  padding: 70px 40px 40px;
+  margin-top: 30px;
+  padding-bottom: 120px;
+}
+.info .name {
+  font-family: inherit;
+  text-align: center;
+  padding: 13px;
+  color: rgba(31, 32, 34, 0.726);
+  position: relative;
+}
+.info .name::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 4px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  border-radius: 2px;
+}
+.info .info-ground {
+  border-radius: 10px;
+  padding: 25px;
+  background: #fff;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+.info .info-header {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+}
+.info .info-body li::after {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  color: #6a11cb;
+  font-weight: bold;
+}
+.info .info-body ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.info .info-body ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+  padding-left: 25px;
+}
+.info .info-body ul li:last-child {
+  border-bottom: none;
+}
+.info .info-body .contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.info .info-body .contact-icons .contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 80px;
+  padding: 15px 10px;
+  border-radius: 10px;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+.info .info-body .contact-icons .contact-item i {
+  color: black;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.info .info-body .contact-icons .contact-item span {
+  font-size: 12px;
+  font-weight: 500;
+  color: black;
+}
+
+.show-more {
+  position: fixed;
+  bottom: 77px;
+  right: 8px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  display: none;
+}
+.show-more.active {
+  display: block;
+}
+.show-more .sm-container {
+  list-style: none;
+  min-width: 150px;
+}
+.show-more .sm-container a {
+  padding: 10px 5px;
+  width: 100%;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.toeic-badge {
+  display: inline-block;
+  background: linear-gradient(to right, #ff8a00, #ff2070);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-left: 10px;
+}/*# sourceMappingURL=style.css.map */

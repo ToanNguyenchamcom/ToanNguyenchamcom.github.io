@@ -1,0 +1,84 @@
+<div class="personal-info">
+  <div class="pictures">
+    <div class="background">
+      <img src="/Assets/img/pngtree-tethered-boat-in-turquoise-water-image_15911269.jpg" alt="">
+    </div>
+    <div class="avatar">
+      <img src="/Assets/img/Anh-avatar-hoat-hinh-de-thuong-cute.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="info">
+    <h1 class="name">Macel</h1>
+
+    <div class="info-ground">
+      <h4 class="info-header">Mục tiêu nghề nghiệp</h4>
+      <div class="info-body">
+        <ul>
+          <li>Trở thành Full-stack Developer</li>
+          <li>Toeic <span class="toeic-badge">850</span></li>
+          <li>Được tham gia vào các dự án lớn</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-ground">
+      <h4 class="info-header">Học Vấn</h4>
+      <div class="info-body">
+        <ul>
+          <li>Cử nhân Công nghệ Thông tin - Đại học Nam Cần Thơ (2023-2027)</li>
+           
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-ground">
+      <h4 class="info-header">Liên Hệ</h4>
+      <div class="info-body">
+        <div class="contact-icons">
+          <a href="mailto:nguyenthetoanzinc@gmail.com" class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+          </a>
+
+          <a href="https://facebook.com/toanvava" target="_blank" class="contact-item">
+            <i class="fab fa-facebook"></i>
+            <span>Facebook</span>
+          </a>
+
+          <a href="https://github.com/ToanNguyenchamcom" target="_blank" class="contact-item">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
+
+         
+
+        
+      </div> <!-- đóng info-body -->
+    </div> <!-- đóng info-ground -->
+  </div> <!-- đóng info -->
+</div> <!-- đóng personal-info -->
+
+
+<script>
+      document.addEventListener('DOMContentLoaded', function() {
+            const infoGrounds = document.querySelectorAll('.info-ground');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            infoGrounds.forEach(ground => {
+                ground.style.opacity = '0';
+                ground.style.transform = 'translateY(20px)';
+                ground.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(ground);
+            });
+        });
+</script>
